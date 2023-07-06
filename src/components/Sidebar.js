@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link } from "react-router-dom";
 
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
@@ -33,12 +34,12 @@ const Sidebar = () => {
           </div>
           {expandedSections.includes("x509") && (
             <ul className="sidebar-sublist">
-              <li  >Self Sign Certificate</li>
-              <li>Format x509 Certificate</li>
-              <li>Fingerprint Certificate</li>
-              <li>Format Private Key</li>
-              <li>Certificate Decode</li>
-              <li>Certificate Key Matcher</li>
+              <li><Link to="/self-sign-certificate">Self Sign Certificate</Link></li>
+              <li><Link to="/format-x509-certificate">Format x509 Certificate</Link></li>
+              <li><Link to="/fingerprint-certificate">Fingerprint Certificate</Link></li>
+              <li><Link to="/format-private-key">Format Private Key</Link></li>
+              <li><Link to="/certificate-decode">Certificate Decode</Link></li>
+              <li><Link to="/certificate-key-matcher">Certificate Key Matcher</Link></li>
             </ul>
           )}
         </li>
@@ -58,10 +59,10 @@ const Sidebar = () => {
           </div>
           {expandedSections.includes("codeDecode") && (
             <ul className="sidebar-sublist">
-              <li>Base64</li>
-              <li>URL Encode/Decode</li>
-              <li>Deflate/Base64Encode</li>
-              <li>Base65 Decode/Inflate</li>
+              <li><Link to="/base64">Base64</Link></li>
+              <li><Link to="/url-encode-decode">URL Encode/Decode</Link></li>
+              <li><Link to="/deflate-base64-encode">Deflate/Base64Encode</Link></li>
+              <li><Link to="/base64-decode-inflate">Base6 Decode/Inflate</Link></li>
             </ul>
           )}
         </li>
@@ -81,19 +82,19 @@ const Sidebar = () => {
           </div>
           {expandedSections.includes("verify") && (
             <ul className="sidebar-sublist">
-              <li>AuthnRequest</li>
-              <li>Response</li>
-              <li>LogoutRequest</li>
-              <li>LogoutResponse</li>
-              <li>Attributes Extractor</li>
+              <li><Link to="/authnrequest">AuthnRequest</Link></li>
+              <li><Link to="/response">Response</Link></li>
+              <li><Link to="/logoutrequest">LogoutRequest</Link></li>
+              <li><Link to="/attributes-extractor">Attributes Extractor</Link></li>
+              <li><Link to="/logoutresponse">LogoutResponse</Link></li>
             </ul>
           )}
         </li>
         <li>
-          <span className="sidebar-section">XML Pretty Print</span>
+          <span className="sidebar-section"><Link to="/xml-pretty-print">XML Pretty Print</Link></span>
         </li>
         <li>
-          <span className="sidebar-section">Metadata</span>
+          <span className="sidebar-section"><Link to="/metadata">Metadata</Link></span>
         </li>
       </ul>
     </div>
