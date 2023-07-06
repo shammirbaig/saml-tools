@@ -22,10 +22,8 @@ const InputBox = ({ title, height, width }) => {
       <textarea
         ref={inputRef}
         type="text"
-        className="border-solid rounded-lg border-2 border-opacity-75 border-black px-1 py-1"
-        style={{ height, width }}
-        multiline
-        rows={4}
+        className="border-solid rounded-sm px-1 py-1"
+        style={{ height, width ,border: "0.75px solid #D3D3D3"}}
       />
       
     </div>
