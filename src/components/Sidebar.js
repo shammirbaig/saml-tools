@@ -69,6 +69,30 @@ const Sidebar = () => {
         <li>
           <div
             className={`sidebar-section ${
+              expandedSections.includes("sign") ? "expanded" : ""
+            }`}
+            onClick={() => toggleSection("sign")}
+          >
+            {expandedSections.includes("sign") ? (
+              <FaChevronDown className="sidebar-icon" />
+            ) : (
+              <FaChevronRight className="sidebar-icon" />
+            )}
+            Sign
+          </div>
+          {expandedSections.includes("sign") && (
+            <ul className="sidebar-sublist">
+              <li><Link to="/sign/authnrequest">AuthnRequest</Link></li>
+              <li><Link to="/sign/response">Response</Link></li>
+              <li><Link to="/sign/logoutrequest">LogoutRequest</Link></li>
+              <li><Link to="/sign/logoutresponse">LogoutResponse</Link></li>
+              <li><Link to="/sign/metadata">Metadata</Link></li>
+            </ul>
+          )}
+        </li>
+        <li>
+          <div
+            className={`sidebar-section ${
               expandedSections.includes("verify") ? "expanded" : ""
             }`}
             onClick={() => toggleSection("verify")}
@@ -82,14 +106,16 @@ const Sidebar = () => {
           </div>
           {expandedSections.includes("verify") && (
             <ul className="sidebar-sublist">
-              <li><Link to="/authnrequest">AuthnRequest</Link></li>
-              <li><Link to="/response">Response</Link></li>
-              <li><Link to="/logoutrequest">LogoutRequest</Link></li>
-              <li><Link to="/attributes-extractor">Attributes Extractor</Link></li>
-              <li><Link to="/logoutresponse">LogoutResponse</Link></li>
+              <li><Link to="/verify/authnrequest">AuthnRequest</Link></li>
+              <li><Link to="/verify/response">Response</Link></li>
+              <li><Link to="/verify/logoutrequest">LogoutRequest</Link></li>
+              <li><Link to="/verify/logoutresponse">LogoutResponse</Link></li>
             </ul>
           )}
         </li>
+        <li>
+        <span className="sidebar-section"><Link to="/attributes-extractor">Attributes Extractor</Link></span>
+      </li>
         <li>
           <span className="sidebar-section"><Link to="/xml-pretty-print">XML Pretty Print</Link></span>
         </li>
