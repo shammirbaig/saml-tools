@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const InputBox = ({ title, height, width }) => {
+const InputBox = ({ onChange,title, height, width }) => {
   const inputRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
@@ -22,6 +22,7 @@ const InputBox = ({ title, height, width }) => {
       <textarea
         ref={inputRef}
         type="text"
+        onChange={onChange}
         className="border-solid rounded-sm px-1 py-1"
         style={{ height, width ,border: "0.75px solid #D3D3D3"}}
       />
