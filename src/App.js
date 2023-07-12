@@ -10,6 +10,7 @@ import FormatX509 from './pages/FormatX509';
 import FormatPrivateKey from './pages/FormatPrivateKey';
 import Base64 from './pages/Base64';
 import UrlEncodeDecode from './pages/UrlEncodeDecode';
+import DeflateBase64Encode from './pages/DeflateBase64Encode';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path="/format-private-key" element={<FormatPrivateKey />} />
         <Route path="/base64" element={<Base64/>} />
         <Route path="/url-encode-decode" element={<UrlEncodeDecode/>} />
+        <Route path="/deflate-base64-encode" element={<DeflateBase64Encode/>} />
+
 
       </Routes>
     </div>

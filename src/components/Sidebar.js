@@ -61,8 +61,8 @@ const Sidebar = () => {
             <ul className="sidebar-sublist">
               <li><Link to="/base64">Base64</Link></li>
               <li><Link to="/url-encode-decode">URL Encode/Decode</Link></li>
-              <li><Link to="/deflate-base64-encode">Deflate/Base64Encode</Link></li>
-              <li><Link to="/base64-decode-inflate">Base6 Decode/Inflate</Link></li>
+              <li><Link to="/deflate-base64-encode">Deflate + Base64 Encode</Link></li>
+              <li><Link to="/base64-decode-inflate">Inflate + Base64 Decode</Link></li>
             </ul>
           )}
         </li>
