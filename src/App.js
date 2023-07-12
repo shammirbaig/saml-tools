@@ -12,6 +12,7 @@ import Base64 from './pages/Base64';
 import UrlEncodeDecode from './pages/UrlEncodeDecode';
 import DeflateBase64Encode from './pages/DeflateBase64Encode';
 import InflateBase64Decode from './pages/InflateBase64Decode';
+import SignAuthnRequest from './pages/SignAuthnRequest';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/url-encode-decode" element={<UrlEncodeDecode/>} />
         <Route path="/deflate-base64-encode" element={<DeflateBase64Encode/>} />
         <Route path="/base64-decode-inflate" element={<InflateBase64Decode/>} />
+        <Route path="//sign/authnrequest" element={<SignAuthnRequest/>} />
         
 
       </Routes>
