@@ -9,6 +9,7 @@ import SelfSignedCertificate from './pages/SelfSignedCertificate';
 import FormatX509 from './pages/FormatX509';
 import FormatPrivateKey from './pages/FormatPrivateKey';
 import Base64 from './pages/Base64';
+import UrlEncodeDecode from './pages/UrlEncodeDecode';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/format-x509-certificate" element={<FormatX509 />} />
         <Route path="/format-private-key" element={<FormatPrivateKey />} />
         <Route path="/base64" element={<Base64/>} />
+        <Route path="/url-encode-decode" element={<UrlEncodeDecode/>} />
 
       </Routes>
     </div>
