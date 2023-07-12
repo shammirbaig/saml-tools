@@ -8,6 +8,7 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import SelfSignedCertificate from './pages/SelfSignedCertificate';
 import FormatX509 from './pages/FormatX509';
 import FormatPrivateKey from './pages/FormatPrivateKey';
+import Base64 from './pages/Base64';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="/self-sign-certificate" element={<SelfSignedCertificate />} />
         <Route path="/format-x509-certificate" element={<FormatX509 />} />
         <Route path="/format-private-key" element={<FormatPrivateKey />} />
+        <Route path="/base64" element={<Base64/>} />
+
       </Routes>
     </div>
         </div>
