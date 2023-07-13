@@ -42,8 +42,8 @@ const FormatPrivateKey = () => {
       <p> Text under this section</p>
 
       
-      <div className="mt-6 flex flex-wrap">
-      <form onSubmit={handleSubmit}>
+      <div className="mt-6 flex w-full flex-wrap">
+      <form  className="w-full" onSubmit={handleSubmit}>
       <div className="w-full pt-4 pb-4 pr-4 lg:w-4/5">
       <InputBox onChange={(e)=>{setPrivateKey(e.target.value)}}title={"Private Key"} width={"100%"} height={"170px"}/>
       </div>

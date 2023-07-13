@@ -35,7 +35,7 @@ function App() {
           <div>
             <Sidebar />
           </div>
-          <div className="flex-grow mt-32">
+          <div className="flex-grow ml-72 mt-32">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/dummy" element={<Dummy />} />

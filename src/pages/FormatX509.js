@@ -42,8 +42,8 @@ const FormatX509 = () => {
       <p> Text under this section</p>
 
       
-      <div className="mt-6 flex flex-wrap">
-      <form onSubmit={handleSubmit}>
+      <div className="mt-6 w-full flex flex-wrap">
+      <form className="w-full" onSubmit={handleSubmit}>
       <div className="w-full pt-4 pb-4 pr-4 lg:w-4/5">
       <InputBox onChange={(e)=>{setX509Cert(e.target.value)}}title={"X.509 Certificate"} width={"100%"} height={"170px"}/>
       </div>

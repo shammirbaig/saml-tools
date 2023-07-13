@@ -16,7 +16,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className="sidebar z-1 h-screen w-80 text-white inline-block mt-20 bg-slate-800 overflow-y-auto">
+    <div className="sidebar z-1 h-screen w-80 text-white inline-block mt-20 bg-slate-800 overflow-y-auto fixed">
       <ul className="sidebar-menu">
         <li>
           <div
