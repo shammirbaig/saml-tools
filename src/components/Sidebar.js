@@ -21,18 +21,18 @@ const Sidebar = () => {
         <li>
           <div
             className={`sidebar-section ${
-              expandedSection.includes("x509") ? "expanded" : ""
+              expandedSection==="x509" ? "expanded" : ""
             }`}
             onClick={() => toggleSection("x509")}
           >
-            {expandedSection.includes("x509") ? (
+            {expandedSection==="x509" ? (
               <FaChevronDown className="sidebar-icon" />
             ) : (
               <FaChevronRight className="sidebar-icon" />
             )}
             X509
           </div>
-          {expandedSection.includes("x509") && (
+          {expandedSection==="x509" && (
             <ul className="sidebar-sublist">
               <li><Link to="/self-sign-certificate">Self Sign Certificate</Link></li>
               <li><Link to="/format-x509-certificate">Format x509 Certificate</Link></li>
@@ -46,18 +46,18 @@ const Sidebar = () => {
         <li>
           <div
             className={`sidebar-section ${
-              expandedSection.includes("codeDecode") ? "expanded" : ""
+              expandedSection==="codeDecode" ? "expanded" : ""
             }`}
             onClick={() => toggleSection("codeDecode")}
           >
-            {expandedSection.includes("codeDecode") ? (
+            {expandedSection==="codeDecode" ? (
               <FaChevronDown className="sidebar-icon" />
             ) : (
               <FaChevronRight className="sidebar-icon" />
             )}
             Code/Decode
           </div>
-          {expandedSection.includes("codeDecode") && (
+          {expandedSection==="codeDecode" && (
             <ul className="sidebar-sublist">
               <li><Link to="/base64">Base64</Link></li>
               <li><Link to="/url-encode-decode">URL Encode/Decode</Link></li>
@@ -69,18 +69,18 @@ const Sidebar = () => {
         <li>
           <div
             className={`sidebar-section ${
-              expandedSection.includes("sign") ? "expanded" : ""
+              expandedSection==="sign" ? "expanded" : ""
             }`}
             onClick={() => toggleSection("sign")}
           >
-            {expandedSection.includes("sign") ? (
+            {expandedSection==="sign" ? (
               <FaChevronDown className="sidebar-icon" />
             ) : (
               <FaChevronRight className="sidebar-icon" />
             )}
             Sign
           </div>
-          {expandedSection.includes("sign") && (
+          {expandedSection==="sign" && (
             <ul className="sidebar-sublist">
               <li><Link to="/sign/authnrequest">AuthnRequest</Link></li>
               <li><Link to="/sign/response">Response</Link></li>
@@ -93,18 +93,18 @@ const Sidebar = () => {
         <li>
           <div
             className={`sidebar-section ${
-              expandedSection.includes("verify") ? "expanded" : ""
+              expandedSection==="verify" ? "expanded" : ""
             }`}
             onClick={() => toggleSection("verify")}
           >
-            {expandedSection.includes("verify") ? (
+            { expandedSection==="verify"  ? (
               <FaChevronDown className="sidebar-icon" />
             ) : (
               <FaChevronRight className="sidebar-icon" />
             )}
             Verify
           </div>
-          {expandedSection.includes("verify") && (
+          { expandedSection==="verify"  && (
             <ul className="sidebar-sublist">
               <li><Link to="/verify/authnrequest">AuthnRequest</Link></li>
               <li><Link to="/verify/response">Response</Link></li>
