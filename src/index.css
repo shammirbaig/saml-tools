@@ -21,8 +21,12 @@
   padding: 8px;
   border-bottom: 0.5px solid white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.sidebar-section:hover {
+  background-color: #4a5568;
+}
 .sidebar-icon {
   margin-right: 8px;
 }
@@ -36,10 +40,20 @@
 }
 
 .sidebar-sublist li {
-  padding: 8px;
   border-bottom: 0.5px solid white;
 }
+.sidebar-sublist li a {
+  /* Add your sublist link styles here */
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
+.sidebar-sublist li a:hover {
+  background-color: #4a5568;
+}
 .expanded {
   font-weight: bold;
 }
