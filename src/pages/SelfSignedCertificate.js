@@ -1,8 +1,8 @@
-import React from "react";
 import InputField from "../components/InputField";
 import InputBox from "../components/InputBox";
-import { useState } from "react";
-
+import React, { useState, useMemo } from 'react'
+import Select from 'react-select'
+import countryList from 'react-select-country-list'
 
 const SelfSignedCertificate = () => {
   const [Country, setCountryName] = useState("");
@@ -17,7 +17,11 @@ const SelfSignedCertificate = () => {
   const [DigestAlgorithm, setDigestAlgorithm] = useState("");
   const [Passphrase, setPassphrase] = useState("");
 
-
+  const [value, setValue] = useState('');
+  const options = useMemo(() => countryList().getData(), []);
+  const changeHandler = value => {
+    setValue(value)
+  }
 
 
 
@@ -57,23 +61,28 @@ const SelfSignedCertificate = () => {
 
 
   return (
-    <div className="content relative ml-12 w-full p-8">
+    <div className="content relative ml-12 w-full p-8" >
       <h1 className="text-xl font-bold"> Generate Self Signed Certificates</h1>
       <p> Text under this section</p>
 
 
+
       <form onSubmit={handleSubmit} >
         <div className="mt-6 flex flex-wrap">
-          <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
-            <InputField
-              type="text"
-              width={"100%"}
-              label="Country Name"
-              required={true}
-              value={Country}
-              onChange={(e) => setCountryName(e.target.value)}
-            />
+          <div className="w-full pt-6 pb-4 pr-4 lg:w-1/2">
+          <label for="cars">Country Name</label>
+            <Select  width={"100%"} required={true} options={options} value={value} onChange={changeHandler} />
           </div>
+          {/* <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
+            <InputField
+              // type="text"
+              
+              
+              
+              // value={Country}
+              // onChange={(e) => setCountryName(e.target.value)}
+            />
+          </div>   */}
           <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
             <InputField
               type="text"
@@ -196,15 +205,15 @@ const SelfSignedCertificate = () => {
         </div>
       </form>
       <div className="mt-6 flex flex-wrap">
-      <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
-      <InputBox title={"Private Key"} width={"100%"} height={"170px"}/>
-      </div>
-      <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
-      <InputBox title={"X.509 cert"} width={"100%"} height={"170px"}/>
-      </div>
-      <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
-      <InputBox title={"CSR"} width={"100%"} height={"170px"}/>
-      </div>
+        <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
+          <InputBox title={"Private Key"} width={"100%"} height={"170px"} />
+        </div>
+        <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
+          <InputBox title={"X.509 cert"} width={"100%"} height={"170px"} />
+        </div>
+        <div className="w-full pt-4 pb-4 pr-4 lg:w-1/2">
+          <InputBox title={"CSR"} width={"100%"} height={"170px"} />
+        </div>
       </div>
     </div>
   );
